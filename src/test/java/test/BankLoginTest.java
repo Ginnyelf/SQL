@@ -28,7 +28,7 @@ public class BankLoginTest {
         var loginPage = open("http://localhost:9999", LoginPage.class);
         var authinfo = DataHelper.getValidAuthInfo();
         var verificationPage = loginPage.validLogin(authinfo);
-        verificationPage.verifyErrorNotificationVisiblity();
+        verificationPage.VerificationPage();
         var verificationCode = SQLHelper.getVerificationCode();
         verificationPage.validVerify(verificationCode.getCode());
 
